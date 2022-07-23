@@ -26,7 +26,7 @@ class MainFragment : Fragment() {
 
     private  val viewModel: MainViewModel by viewModels()
 
-    val gendersList = listOf("Male", "Female")
+    private val gendersList = listOf("Male", "Female")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

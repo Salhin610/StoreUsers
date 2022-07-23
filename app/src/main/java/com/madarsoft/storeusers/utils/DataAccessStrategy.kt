@@ -9,6 +9,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.startCoroutine
 
+/*
+* Get All users From Local DB
+* */
 fun <T> performGetOperation(databaseQuery: () -> LiveData<T>
 ): LiveData<Resource<T>> =
     liveData(Dispatchers.IO) {
@@ -17,6 +20,11 @@ fun <T> performGetOperation(databaseQuery: () -> LiveData<T>
         emitSource(source)
     }
 
+
+
+/*
+* Insert user to Local DB
+* */
 fun  performInsertOperation(
     userModel: UserModel,
     insertUser : suspend (UserModel) -> Unit
